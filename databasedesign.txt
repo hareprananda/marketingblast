@@ -1,0 +1,24 @@
+table user  = {
+    _id
+    email,
+    created_at,
+    updated_at
+}
+
+table entity = {
+    _id,
+    entityName
+}
+
+table userEntity = {
+    _id,
+    userId,
+    entityId
+}
+
+table contact = {
+    name,
+    photo,
+    number,
+    email
+}
