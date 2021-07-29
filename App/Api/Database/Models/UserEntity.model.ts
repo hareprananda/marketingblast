@@ -10,9 +10,8 @@ const UserEntitySchema = new mongoose.Schema<IUserEntity>({
   entityId: { type: mongoose.Types.ObjectId, required: true },
 });
 
-const UserEntityModel = mongoose.model<IUserEntity>(
-  "userentity",
-  UserEntitySchema
-);
+const UserEntityModel =
+  mongoose.models.userentity ||
+  mongoose.model<IUserEntity>("userentity", UserEntitySchema);
 
 export default UserEntityModel;
